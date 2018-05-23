@@ -1,0 +1,19 @@
+// var sum = '';
+// var sheet = '';
+// var s = [];
+// var keys = ['1','!','2','@','3','4','$','5','%','6','^','7','8','*','9','(','0','q','Q','w','W','e','E','r','t','T','y','Y','u','i','I','o','O','p','P','a','s','S','d','D','f','g','G','h','H','j','J','k','l','L','z','Z','x','c','C','v','V','b','B','n','m'];
+
+// var sound = 16;
+
+// $.each( keys, function( index, value ){
+//     var sounds = {};
+//     sum = {
+//         "id"  : index,
+//         "key" : value, 
+//         "sound" : sound, 
+//         "audio" : new Audio('sounds/sounds/'+sound+'.wav')
+//     };
+//     s.push(sum);
+//     sound++;
+    
+// });

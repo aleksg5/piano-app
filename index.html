@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pianino</title>
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">  
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+        <div id="heading">
+                <div id="menu">
+                        <h1>Pianino</h1>
+                        <ul>
+                                <li><a id="how-link" href="#">Pomoc</a></li>
+                                <li><a id="sheets-link" href="#">Nuty</a></li>
+                                <li><a id="add-link" href="#">Dodaj nuty</a></li>
+                                <li><a id="record-link" href="#">Nagraj</a></li>
+                        </ul>
+                </div>
+                                
+                <div id="how">
+                        <button class="close">X</button>
+                        <h3>Jak zagrać?</h3>
+                        <p>Aby zagrać na pianinie, naciśnij na klawiaturze odpowiedni klawisz, który jest przypasowany do danego klawisza pianina lub po przez naciśnięcie na dany klawisz lewym przyciskiem myszy.</p>
+                        <hr>
+                        <h3>Nuty</h3>
+                        <p>Aby móc zagrać utwór dostępny w bazie danych, należy nacisnąć link "Nuty", a następnie wybrać spośród listy utwór. Aby dodać utwór należy przejść do zakładki "Dodaj nuty", a następnie wpisać nazwę utworu, nuty, a następnie wysłać naciskając przycisk "Wyślij"</p>
+                        <hr>
+                        <h3>Nagrywanie oraz odgrywanie nagranego utworu</h3>
+                        <p>Aby nagrać utwór należy przejść do linku o nazwie "Nagraj", a następnie po naciśnięciu przycisku "Rozpocznij nagrywanie" zostaną nagrane wszystkie nuty, które zostały odegrane do czasu ponownego naciśnięcia przycisku, który spowoduje wstrzymanie nagrywania. Aby odtworzyć nagranie należy nacisnąć przycisk "Odtwórz"</p>
+                </div>
+                <div id="select">
+                        <button class="close">X</button>
+                        <h3>Wybierz nuty</h3>
+                        <select name="sheets" id="sheets">
+                                <option value="0">Wybierz nuty</option>
+                        </select>
+                        <div id="sheet"></div>
+                </div>
+                <div id="add">
+                        <button class="close">X</button>
+                        <h3>Dodaj nuty</h3>
+                        <form id="form-sheet">
+                                <input type="text" id="title" name="title" placeholder="Tytuł" required>
+                                <textarea name="sheet" id="new-sheet" placeholder="Nuty" required></textarea>
+                                <input id="submit" type="button" value="Dodaj">
+                        </form>
+                </div>
+                <div id="record">
+                        <button class="close">X</button>
+                        <h3>Nagraj i odtwórz</h3>
+                        <button id="record-button">Nagraj</button>
+                        <button id="play-button">Odtwórz</button>
+                        <div id="record-sheet"></div>
+                </div>                
+        </div>
+    <div id="piano">
+        <div id="keyboard">
+            <div id="octave1">
+                    <div class="w">
+                            <button id="k1" class="white"><span>1</span></button>
+                            <button id="k2" class="white"><span>2</span></button>
+                            <button id="k3" class="white"><span>3</span></button>
+                            <button id="k4" class="white"><span>4</span></button>
+                            <button id="k5" class="white"><span>5</span></button>
+                            <button id="k6" class="white"><span>6</span></button>
+                            <button id="k7" class="white"><span>7</span></button>
+                    </div>
+                    <div class="b">
+                            <button id="k1b" class="black">&uArr; + 1</button>
+                            <button id="k2b" class="black">&uArr; + 2</button>
+                            <button id="k4b" class="black">&uArr; + 4</button>
+                            <button id="k5b" class="black">&uArr; + 5</button>
+                            <button id="k6b" class="black">&uArr; + 6</button>
+                    </div>
+            </div>
+            <div id="octave2">
+                    <div class="w">
+                            <button id="k8" class="white"><span>8</span></button>
+                            <button id="k9" class="white"><span>9</span></button>
+                            <button id="k0" class="white"><span>0</span></button>
+                            <button id="kq" class="white"><span>q</span></button>
+                            <button id="kw" class="white"><span>w</span></button>
+                            <button id="ke" class="white"><span>e</span></button>
+                            <button id="kr" class="white"><span>r</span></button>
+                    </div>
+                    <div class="b">
+                            <button id="k8b" class="black">&uArr; + 8</button>
+                            <button id="k9b" class="black">&uArr; + 9</button>
+                            <button id="kqb" class="black">&uArr; + q</button>
+                            <button id="kwb" class="black">&uArr; + w</button>
+                            <button id="keb" class="black">&uArr; + e</button>
+                    </div>
+            </div>
+            <div id="octave3">
+                    <div class="w">
+                            <button id="kt" class="white"><span>t</span></button>
+                            <button id="ky" class="white"><span>y</span></button>
+                            <button id="ku" class="white"><span>u</span></button>
+                            <button id="ki" class="white"><span>i</span></button>
+                            <button id="ko" class="white"><span>o</span></button>
+                            <button id="kp" class="white"><span>p</span></button>
+                            <button id="ka" class="white"><span>a</span></button>
+                    </div>
+                    <div class="b">
+                            <button id="ktb" class="black">&uArr; + t</button>
+                            <button id="kyb" class="black">&uArr; + y</button>
+                            <button id="kib" class="black">&uArr; + i</button>
+                            <button id="kob" class="black">&uArr; + o</button>
+                            <button id="kpb" class="black">&uArr; + p</button>
+                    </div>
+            </div>
+            <div id="octave4">
+                    <div class="w">
+                            <button id="ks" class="white"><span>s</span></button>
+                            <button id="kd" class="white"><span>d</span></button>
+                            <button id="kf" class="white"><span>f</span></button>
+                            <button id="kg" class="white"><span>g</span></button>
+                            <button id="kh" class="white"><span>h</span></button>
+                            <button id="kj" class="white"><span>j</span></button>
+                            <button id="kk" class="white"><span>k</span></button>
+                    </div>
+                    <div class="b">
+                            <button id="ksb" class="black">&uArr; + s</button>
+                            <button id="kdb" class="black">&uArr; + d</button>
+                            <button id="kgb" class="black">&uArr; + g</button>
+                            <button id="khb" class="black">&uArr; + h</button>
+                            <button id="kjb" class="black">&uArr; + j</button>
+                    </div>
+            </div>
+            <div id="octave5">
+                    <div class="w">
+                            <button id="kl" class="white"><span>l</span></button>
+                            <button id="kz" class="white"><span>z</span></button>
+                            <button id="kx" class="white"><span>x</span></button>
+                            <button id="kc" class="white"><span>c</span></button>
+                            <button id="kv" class="white"><span>v</span></button>
+                            <button id="kb" class="white"><span>b</span></button>
+                            <button id="kn" class="white"><span>n</span></button>
+                    </div>
+                    <div class="b">
+                            <button id="klb" class="black">&uArr; + l</button>
+                            <button id="kzb" class="black">&uArr; + z</button>
+                            <button id="kcb" class="black">&uArr; + c</button>
+                            <button id="kvb" class="black">&uArr; + v</button>
+                            <button id="kbb" class="black">&uArr; + b</button>
+                    </div>
+            </div>
+            <div id="octave6">
+                    <div class="w">
+                            <button id="km" class="white"><span>m</span></button>
+                    </div>
+            </div>    
+        </div>
+        
+    </div>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+body{
+    background: #f1f1f1;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+ul li{
+    display: inline;
+    padding: 0 5px;
+}
+ul li a{
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+#heading{
+    position: relative;
+    height: auto;
+    width: 500px;
+    top: 80px;
+    padding: 20px;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    font-family: 'Berkshire Swash', cursive;
+    border-radius: 10px;
+    z-index: 1;
+    overflow: hidden;
+    margin: auto;
+}
+#heading #menu{
+    position: relative;
+}
+#heading #menu a{
+    font-size: 16px;
+    color: #000;
+}
+#heading #menu a:hover{
+    color: #535353;
+}
+#piano{
+    height: 350px;
+    width: 1220px;
+    padding: 10px;
+    position: relative;
+    background: #000;
+    border-radius: 8px;
+    margin: auto;
+}
+
+#piano #keyboard{
+    width: auto;
+    position: absolute;
+    bottom: 10px;
+    border-top: 3px solid #212121;
+}
+#piano #keyboard div{
+    float: left;
+}
+#keyboard .white{
+    width: 32px;
+    height: 210px;
+    color: #000;
+    border: none;
+    background: rgba(188,188,188,1);
+    background: -moz-linear-gradient(top, rgba(188,188,188,1) 0%, rgba(208,208,208,1) 5%, rgba(240,243,242,1) 22%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(188,188,188,1) 0%, rgba(208,208,208,1) 5%, rgba(240,243,242,1) 22%, rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(top, rgba(188,188,188,1) 0%, rgba(208,208,208,1) 5%, rgba(240,243,242,1) 22%, rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(top, rgba(188,188,188,1) 0%, rgba(208,208,208,1) 5%, rgba(240,243,242,1) 22%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to bottom, rgba(188,188,188,1) 0%, rgba(208,208,208,1) 5%, rgba(240,243,242,1) 22%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bcbcbc', endColorstr='#ffffff', GradientType=0 );
+    cursor: pointer;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+#keyboard .white span{
+    position: relative;
+    top: 60px;
+}
+#keyboard .b{
+    position: absolute;
+    top: 0;
+}
+#keyboard .black{
+    background: #000;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 136px;
+    color: #fff;
+    border: none;
+    position: relative;
+    line-height: 1em;
+    margin: 0;
+    cursor: pointer;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#keyboard .white:nth-child(7){
+    margin-right: 3px;
+}
+#keyboard .black:nth-child(1){
+    left: 22px;
+}
+#keyboard .black:nth-child(2){
+    left: 33px;
+}
+#keyboard .black:nth-child(3){
+    left: 76px;
+}
+#keyboard .black:nth-child(4){
+    left: 86px;
+}
+#keyboard .black:nth-child(5){
+    left: 96px;
+}
+.white.active{
+    box-shadow: 0 2px #666;
+    background: #535353 !important;
+}
+.black.active{
+    box-shadow: 0 -2px #666;
+    background: #535353 !important;
+}
+.active{
+    transform: translateY(2px);
+}
+button:focus{
+    outline: none;
+}
+.white{
+    margin: 0 -1px; 
+}
+
+#how, #select, #add, #record{
+    display: none;
+}
+#select, #record{
+    opacity: 0;
+}
+.close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.close:hover{
+    background: #535353;
+}
+#sheets{
+    margin: 10px 5px;
+    width: 50%;
+    font-family: 'Kanit', sans-serif;   
+}
+#sheet, #record-sheet{
+    display: none;
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: left;
+    word-wrap: break-word;
+    font-family: 'Courgette', cursive;
+    letter-spacing: 1px;
+}
+#form-sheet{
+    overflow: hidden;
+}
+#form-sheet input, #form-sheet textarea{
+    display: block;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px 0;
+}
+#form-sheet input[type="text"]{
+    margin-top: 0;
+}
+#form-sheet input{
+    width: 50%;
+    border: 1px solid #000;
+}
+#form-sheet textarea{
+    width: 486px;
+    height: 100px;
+    resize: none;
+}
+#form-sheet #submit, #record #play-button, #record #record-button{
+    margin: auto;
+    width: 100px;
+    background: #000;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#form-sheet #submit:hover{
+    background: #535353;
+}
+.danger::-webkit-input-placeholder {
+    color: #d9534f;
+}
+.danger::-moz-placeholder {
+    color: #d9534f;
+}
+.danger:-moz-placeholder {   /* Older versions of Firefox */
+    color: #d9534f;
+}
+.danger:-ms-input-placeholder {
+    color: #d9534f;
+}
+#record #play-button, #record #record-button{
+    padding: 5px;
+    transition: all 0.3s !important;
+    margin-bottom: 10px;
+}
+#record #play-button:hover, #record #record-button:hover{
+    background: #535353 !important;
+}
+#record-sheet div{
+    display: inline-block;
+    transition: all 0.3s;
+}
